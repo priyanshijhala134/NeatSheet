@@ -27,7 +27,7 @@ Whether you're a student, analyst, or developer, NeatSheet helps you clean, tran
 
 ## 🚀 Live Demo
 
-👉 [https://your-app-name.streamlit.app](https://your-app-name.streamlit.app)  
+👉https://neatsheet-h9kbtj7fobwuukegzhx5vv.streamlit.app/  
 
 ## 🛠️ Installation (Run Locally)
 
