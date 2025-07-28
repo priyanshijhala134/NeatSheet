@@ -1,58 +1,52 @@
-# NeatSheet
-# 🧹 Data Cleaning Tool
+# 🧹 NeatSheet: A Streamlit-Based Data Cleaning Tool
 
-A web-based application that allows users to clean and export datasets effortlessly. Built using **Streamlit**, this tool is designed to simplify the data preprocessing phase — one of the most time-consuming steps in any data project.
+**NeatSheet** is a web-based data cleaning assistant designed to streamline messy datasets into clean, analysis-ready formats — all through a beautiful and interactive Streamlit interface.
 
-Whether you're a beginner working with messy CSVs or a professional who needs to clean data quickly without writing code, this app is made for you.
+Whether you're a student, analyst, or developer, NeatSheet helps you clean, transform, and export data in minutes without writing a single line of code.
 
 ## ✨ Features
 
-- 📤 **Upload CSV files** via drag-and-drop or file picker
-- 🧼 **Clean data** by handling:
-  - Missing values
-  - Duplicates
-  - Unnecessary columns
-- 📊 **Preview cleaned data** in an interactive table
-- 📥 **Export** cleaned dataset to Excel (`.xlsx`)
-- 💡 User-friendly interface built with **Streamlit**
+- Upload CSV/Excel files (up to 200MB)
+- Handle missing values with basic or KNN imputation
+- Detect and remove outliers using Z-score or IQR
+- Drop unwanted columns or duplicates
+- Apply advanced transformations and custom logic
+- Auto-profile your dataset and generate a downloadable PDF report
+- Export cleaned data to CSV, Excel, and JSON
+
+## 🧾 File Structure
+
+| File | Description |
+|------|-------------|
+| `app.py` | **Main executable Streamlit app** containing UI, logic, routing, and theme customization. |
+| `cleaning_functions.py` | Functions for handling missing values, outliers, and KNN imputation. |
+| `transformations.py` | Feature engineering utilities: normalization, encoding, datetime features, and custom transformations. |
+| `profiling.py` | Dataset profiling logic with statistics, charts (matplotlib, seaborn, plotly), and correlation heatmaps. |
+| `reporting.py` | Generates PDF quality reports using FPDF for numeric and categorical summary statistics. |
+
 
 ## 🚀 Live Demo
 
-👉 Try the app here: [https://your-app-name.streamlit.app](https://your-app-name.streamlit.app)  
-*(Replace with your actual deployment URL)*
+👉 [https://your-app-name.streamlit.app](https://your-app-name.streamlit.app)  
 
-## 🛠️ How to Use the App
-
-1. Launch the web app
-2. Upload a CSV file
-3. Choose from data cleaning options
-4. Preview the processed data
-5. Export the cleaned dataset as an Excel file
-
-## 🧰 Tech Stack
-
-- **Frontend & Backend**: [Streamlit](https://streamlit.io/)
-- **Data Handling**: Pandas, NumPy
-- **Excel Export**: XlsxWriter, OpenPyXL
-- **Deployment**: Streamlit Cloud
-- 
-## 💻 Local Setup Instructions
+## 🛠️ Installation (Run Locally)
 
 ### ✅ Prerequisites
-- Python 3.8 or higher
-- Pip package manager
 
-### 🔧 Installation
+- Python 3.8+
+- pip package manager
+
+### 💻 Steps
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/yourusername/datacleaning-tool.git
-cd datacleaning-tool
+git clone https://github.com/yourusername/neatsheet.git
+cd neatsheet
 
-# 2. (Optional) Create a virtual environment
+# 2. (Optional) Create virtual environment
 python -m venv venv
-venv\Scripts\activate  # Windows
-# source venv/bin/activate  # Mac/Linux
+venv\Scripts\activate  # On Windows
+# source venv/bin/activate  # On Linux/Mac
 
 # 3. Install dependencies
 pip install -r requirements.txt
